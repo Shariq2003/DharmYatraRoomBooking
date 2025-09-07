@@ -1,4 +1,4 @@
-import bgHero from "../../assets/bg-hero.jpg";
+import bgHero from "../../assets/bg-hero2.jpg";
 import ServicesSlider from "../ServicesSlider";
 
 const Hero = () => {
@@ -6,7 +6,7 @@ const Hero = () => {
     <section
       id="hero"
       className="relative h-screen bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-white text-center px-6"
-      style={{ backgroundImage: `url(${bgHero})` }}
+      style={{ backgroundImage: `url(${bgHero})`,backgroundPosition: "center 70%" }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="absolute top-0 w-full">

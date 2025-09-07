@@ -14,8 +14,7 @@ const Services = () => {
         "Comfortable and affordable accommodation with modern amenities. Perfect for budget-conscious travelers and pilgrims visiting Ayodhya.",
       email: "standard@stayayodhya.com",
       phone: "+91 98765 43210",
-      link:
-        "https://api.whatsapp.com/send/?phone=919876543210&text=Hi%21+I%27d+like+to+book+the+Standard+Room.+Could+you+please+provide+more+details+about+availability+and+pricing%3F&type=phone_number&app_absent=0",
+      link: "https://wa.me/919876543210?text=Hi! I'd like to book the Standard Room. Could you please provide more details about availability and pricing?",
       mapSrc:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
     },
@@ -26,8 +25,7 @@ const Services = () => {
         "Spacious rooms with premium furnishing and enhanced comfort. Ideal for families and groups seeking a memorable stay in the holy city.",
       email: "deluxe@stayayodhya.com",
       phone: "+91 98765 43211",
-      link:
-        "https://api.whatsapp.com/send/?phone=919876543211&text=Hi%21+I%27d+like+to+book+the+Deluxe+Room.+Could+you+please+provide+more+details+about+availability+and+pricing%3F&type=phone_number&app_absent=0",
+      link: "https://wa.me/919876543211?text=Hi! I'd like to book the Deluxe Room. Could you please provide more details about availability and pricing?",
       mapSrc:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
     },
@@ -38,8 +36,7 @@ const Services = () => {
         "Premium suites with luxury amenities and personalized service. Experience the finest hospitality while exploring the spiritual heart of India.",
       email: "premium@stayayodhya.com",
       phone: "+91 98765 43212",
-      link:
-        "https://api.whatsapp.com/send/?phone=919876543212&text=Hi%21+I%27d+like+to+book+the+Premium+Room.+Could+you+please+provide+more+details+about+availability+and+pricing%3F&type=phone_number&app_absent=0",
+      link: "https://wa.me/919876543212?text=Hi! I'd like to book the Premium Room. Could you please provide more details about availability and pricing?",
       mapSrc:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
     },

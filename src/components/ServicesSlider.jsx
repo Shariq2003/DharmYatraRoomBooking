@@ -12,14 +12,14 @@ const ServicesSlider = () => {
     <div className="w-full bg-transparent py-6 overflow-hidden relative">
       <motion.div
         className="flex gap-12 whitespace-nowrap"
-        animate={{ x: ["0%", "-50%"] }}
+        animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
-          duration: 18,
+          duration: 8,
           ease: "linear",
         }}
       >
-        {[...services, ...services, ...services, ...services].map((service, index) => (
+        {[...services, ...services, ...services, ...services, ...services, ...services, ...services].map((service, index) => (
           <span
             key={index}
             className="text-lg font-semibold text-white 
