@@ -4,7 +4,9 @@ import { FaRegStar } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
-    <section className="py-16 bg-gray-50 text-gray-800">
+    <section 
+    id="about"
+    className="py-16 bg-gray-50 text-gray-800">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           About Us
