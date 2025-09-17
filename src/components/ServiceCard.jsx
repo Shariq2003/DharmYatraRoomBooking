@@ -2,11 +2,12 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiMessageCircle } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import "../index.css";
 
 const ServiceCard = ({ image, title, description, email, phone, link, mapSrc, expanded, onToggle }) => {
   return (
     <motion.div
-      className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-md hover:shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 cursor-pointer flex flex-col min-h-[650px]"
+      className="service-card-mobile bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-md hover:shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 cursor-pointer flex flex-col min-h-[650px]"
       whileHover={{ scale: 1.03 }}
     >
       <img

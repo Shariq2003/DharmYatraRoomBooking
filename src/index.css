@@ -15,3 +15,27 @@
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 640px) {
+  .service-card-mobile {
+    min-height: auto !important;
+  }
+
+  .service-card-mobile img {
+    height: 36vw !important;
+  }
+
+  .service-card-mobile h3 {
+    font-size: 1rem !important;
+  }
+
+  .service-card-mobile p {
+    font-size: 0.75rem !important;
+  }
+
+  .service-card-mobile a,
+  .service-card-mobile button {
+    font-size: 0.75rem !important;
+    padding: 0.5rem !important;
+  }
+}
