@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
+import WhatsAppWidget from "./components/widgets/WhatsAppWidget";
+
 function App() {
   return (
     <Router>
@@ -17,6 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
+        <WhatsAppWidget />
         <Footer />
       </div>
     </Router>

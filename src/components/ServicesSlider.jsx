@@ -15,21 +15,21 @@ const ServicesSlider = () => {
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
-          duration: 8,
+          duration: 10,
           ease: "linear",
         }}
       >
-        {[...services, ...services, ...services, ...services, ...services, ...services, ...services].map((service, index) => (
+        {[...services, ...services, ...services].map((service, index) => (
           <span
             key={index}
-            className="text-lg font-semibold text-white 
-              bg-gradient-to-r from-yellow-400 to-yellow-600
-              rounded-full cursor-pointer px-6 py-2
-              shadow-md hover:shadow-yellow-400/50 
-              transition-transform transform hover:scale-110 
-              select-none"
+            className="relative flex items-center justify-center text-lg md:text-xl font-bold 
+              bg-clip-text text-transparent rounded-full cursor-pointer px-6 py-2
+              shadow-md hover:shadow-yellow-400/50 transition-transform transform hover:scale-110 select-none"
           >
-            {service}
+            <span className="absolute inset-0 bg-black/30 rounded-full z-0"></span>
+            <span className="relative z-10 bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+              {service}
+            </span>
           </span>
         ))}
       </motion.div>
