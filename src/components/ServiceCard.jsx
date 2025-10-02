@@ -3,18 +3,25 @@ import { FiMessageCircle } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
+import Room3bg from "../assets/room3.jpeg";
+import { MdOutlineTravelExplore } from "react-icons/md";
 
-const ServiceCard = ({ image, title, description, email, phone, link, mapSrc, expanded, onToggle }) => {
+const ServiceCard = ({ image, title, description, email, phone, link, mapData, expanded, onToggle, onOpenMedia }) => {
   return (
     <motion.div
       className="service-card-mobile bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-md hover:shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 cursor-pointer flex flex-col min-h-[650px]"
       whileHover={{ scale: 1.03 }}
     >
+    <div className="relative w-full h-52 rounded-t-2xl overflow-hidden cursor-pointer" onClick={() => onOpenMedia()}>
       <img
-        src={image}
+        src={image !== "" ? image : Room3bg}
         alt={title}
-        className="w-full h-52 object-cover rounded-t-2xl"
+        className="w-full h-full object-cover"
       />
+      <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition-opacity duration-300">
+        Show More Media
+      </div>
+    </div>
 
       <div className="p-6 flex flex-col gap-4 flex-1">
         <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 bg-clip-text text-transparent">
@@ -66,8 +73,12 @@ const ServiceCard = ({ image, title, description, email, phone, link, mapSrc, ex
                 exit={{ opacity: 0, height: 0 }}
                 className="overflow-hidden mt-3 rounded-xl shadow-sm mb-4"
               >
+              {mapData.description != "" && (<div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-sm my-2">
+                <MdOutlineTravelExplore className="text-green-500" size={34}/>
+                <span>{mapData.description}</span>
+              </div>)}
                 <iframe
-                  src={mapSrc}
+                  src={mapData.url}
                   width="100%"
                   height="220"
                   style={{ border: 0 }}

@@ -4,44 +4,12 @@ import Room2bg from "../../assets/room2.jpeg";
 import Room3bg from "../../assets/room3.jpeg";
 import ServiceCard from "../ServiceCard";
 import { motion } from "framer-motion";
+import rooms from "../../utils/roomsData";
+import MediaCarouselPopup from "../widgets/MediaCarouselPopup";
 
 const Services = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const rooms = [
-    {
-      image: Room1bg,
-      title: "Standard Room",
-      description:
-        "Comfortable and affordable accommodation with modern amenities. Perfect for budget-conscious travelers and pilgrims visiting Ayodhya.",
-      email: "standard@stayayodhya.com",
-      phone: "+91 83183 82740",
-      link: "https://wa.me/918318382740?text=Hi%21%20I%27d%20like%20to%20book%20the%20Standard%20Room.%20Could%20you%20please%20provide%20more%20details%20about%20availability%20and%20pricing%3F",
-      mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
-    },
-    {
-      image: Room2bg,
-      title: "Deluxe Room",
-      description:
-        "Spacious rooms with premium furnishing and enhanced comfort. Ideal for families and groups seeking a memorable stay in the holy city.",
-      email: "deluxe@stayayodhya.com",
-      phone: "+91 83183 82740",
-      link: "https://wa.me/918318382740?text=Hi%21%20I%27d%20like%20to%20book%20the%20Deluxe%20Room.%20Could%20you%20please%20provide%20more%20details%20about%20availability%20and%20pricing%3F",
-      mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
-    },
-    {
-      image: Room3bg,
-      title: "Premium Room",
-      description:
-        "Premium suites with luxury amenities and personalized service. Experience the finest hospitality while exploring the spiritual heart of India.",
-      email: "premium@stayayodhya.com",
-      phone: "+91 83183 82740",
-      link: "https://wa.me/918318382740?text=Hi%21%20I%27d%20like%20to%20book%20the%20Premium%20Room.%20Could%20you%20please%20provide%20more%20details%20about%20availability%20and%20pricing%3F",
-      mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56070.08143049812!2d77.1815414486328!3d28.558347100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b8aa7b6b4b%3A0xab3378453fb73175!2sShri%20Ram%20Mandir%2C%20Kailash%20Hi%C4%BAls!5e0!3m2!1sen!2sin!4v1756845641754!5m2!1sen!2sin",
-    },
-  ];
+  const [mediaRoom, setMediaRoom] = useState(null);
 
   return (
     <section id="services" className="py-16 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
@@ -63,15 +31,27 @@ const Services = () => {
               className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white dark:bg-gray-800 backdrop-blur-md border border-gray-200 dark:border-gray-700"
             >
               <ServiceCard
-                {...room}
+                title={room.title}
+                description={room.description}
+                email={room.email}
+                phone={room.phone}
+                link={room.link}
+                image={room.bgImage ? room.bgImage : Room3bg}
+                mapData={room.location[0]}
                 expanded={openIndex === index}
                 onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+                onOpenMedia={() => setMediaRoom(room.media)}
                 className="flex flex-col h-full"
               />
             </motion.div>
           ))}
         </div>
       </div>
+      <MediaCarouselPopup
+        isOpen={!!mediaRoom}
+        onClose={() => setMediaRoom(null)}
+        media={mediaRoom}
+      />
     </section>
   );
 };

@@ -50,7 +50,7 @@ const ContactUs = () => {
               ></textarea>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-semibold rounded-xl shadow-md transition-all duration-300"
+                className="w-full px-6 py-3 bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-semibold rounded-xl shadow-md transition-all duration-300 cursor-pointer"
               >
                 Send Message
               </button>
