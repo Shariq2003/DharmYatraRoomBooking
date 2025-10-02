@@ -64,6 +64,14 @@ const ServiceCard = ({ image, title, description, email, phone, link, mapData, e
           >
             {expanded ? "Hide Map" : "Show Directions"}
           </button>
+          <button
+            className="bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg text-sm md:hidden justify-center px-4 py-2 w-full font-semibold transition-all duration-300 flex items-center gap-2"
+            onClick={() => {
+              onOpenMedia();
+            }}
+          >
+            View Media
+          </button>
 
           <AnimatePresence>
             {expanded && (
